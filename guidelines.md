@@ -36,10 +36,10 @@ Do not add multiple prefixes because you may end up with a noisy title.
 #### 1.4 Tag pull requests
 Use tagging feature in your project management tool to tag your changes. These tags usually autocomplete resulting in reduced number of typos as compared to prefix in the title. Same tags can be added to the related work-items like tasks and bugs. It makes it easier to search for all work-items and changes using one query in the project management tool. The reason we need both prefix and tags is that tags generally do not show up in the email notifications you receive related to the code changes. Another advantage of tags is that you can tag your code changes with multiple tags. Adding multiple prefixes in the title will only introduce noise.
 
-### Enforcement 
+## Enforcement 
 To enforce these guidelines, code reviewers can check the pull request titles and provide feedback to the submitter if necessary. Teams can also use automated tools to check if pull request titles meet the requirements.
 
-### Exceptions
+## Exceptions
 There may be situations where the changes being made are difficult to describe in a concise title, or where a generic title is sufficient. In such cases, it is important to ensure that the description of the pull request provides enough information about the changes.
 
 
@@ -66,10 +66,10 @@ Include all test cases with steps that were used to validate the changes. Includ
 #### 2.7 Include screenshots and outputs of the test cases
 Include screenshots or outputs of the test cases showing that all test cases passed. Include outputs, so future testers can verify their outputs with your output.
 
-### Enforcement
+## Enforcement
 To enforce these guidelines, reviewers can check the pull request description and provide feedback to the submitter if necessary. Teams can also use automated tools to add an agreed upon template to the description box automatically when a new pull request is created. Reviewers need to make sure all details are provided in the added template.
 
-### Exceptions
+## Exceptions
 There may be situations where the changes being made are minor or self-explanatory, and a detailed description is not necessary. However, it is always better to err on the side of providing more information rather than less, to ensure that reviewers have all the information they need to make informed decisions.
 
 # 3 Adding reviewers
@@ -89,18 +89,18 @@ Make sure at least one reviewer in the list of reviewers is programming language
 #### 3.5 Indicate if reviewer is a required reviewer or an optional reviewer
 While adding reviewers, make sure you indicate who is required and who is not-required to review the changes.
 
-### Enforcement
+## Enforcement
 The team lead or project manager is responsible for establishing and communicating code review policies with the team. Reviewers should add additional reviewers as they may see fit. Author is responsible for getting code reviewed by all required reviewers.
 
-### Exceptions
+## Exceptions
 While code review is an important process to ensure the quality of the codebase, there may be certain situations where getting code reviewed may not be necessary or feasible. If the changes being made are very minor, such as fixing a typo or adjusting formatting, it may not be necessary to have the code reviewed. Sometimes time sensitive changes like build fixes over weekends could be self-approved, even though it is not ideal.
 
 # 4 Publishing the code changes
 
-## 4.1 Mark code changes as "draft" if they are in progress
+#### 4.1 Mark code changes as "draft" if they are in progress
 If changes are still in progress, but you want early feedback on the design, make sure you mark the changes with prefix like draft or WIP (work in progress). 
 
-## 4.2 Publish changes only after you thorough validation
+#### 4.2 Publish changes only after you thorough validation
 After thorough validation is done, publish the code changes. 
 
 # 5 Review
@@ -110,7 +110,7 @@ After thorough validation is done, publish the code changes.
 #### 5.1.1 Give sufficient time to reviewers to review the changes
 Team lead should provide guidance on review SLA. Author should follow up with reviewers if code hasn't reviewed within SLA.
 
-### 5.1.2 Use code review comments as a learning opportunity
+#### 5.1.2 Use code review comments as a learning opportunity
 Author's should be open to feedback, constructive criticism, and collaborate with others. 
 
 #### 5.1.3 Mark comments as Pending, Resolved, Won't Fix, Closed etc.
