@@ -64,11 +64,51 @@ Include all test cases with steps that were used to validate the changes. Includ
 #### 2.7 Include screenshots and outputs of the test cases
 Include screenshots or outputs of the test cases showing that all test cases passed. Include outputs, so future testers can verify their outputs with your output.
 
-## Enforcement
+### Enforcement
 To enforce these guidelines, reviewers can check the pull request description and provide feedback to the submitter if necessary. Teams can also use automated tools to add an agreed upon template to the description box automatically when a new pull request is created. Reviewers need to make sure all details are provided in the added template.
 
-## Exceptions
+### Exceptions
 There may be situations where the changes being made are minor or self-explanatory, and a detailed description is not necessary. However, it is always better to err on the side of providing more information rather than less, to ensure that reviewers have all the information they need to make informed decisions.
+
+# Adding reviewers
+
+
+
+# Review
+
+#### Author is a first reviewer
+Make sure you review you own pull request. Add comments to your own pull request where changes should be made. Make all required changes before adding other reviewers.
+
+#### Add your own team or project alias
+Include your own team and project team alias. Include at least one senior reviewer from your team.
+
+#### Add affected area owners
+Make sure you find out who owns the area that is affected by your changes and include all affected area owners. Include their team alias and at least one senior member of the team individually per affected area.
+
+#### Add a programming language expert
+Make sure at least one reviewer in the list of reviewers is programming language expert. If not, find out who can help and include them as a reviewer.
+
+### Enforcement
+
+### Exceptions
+
+# Check-in
+
+#### Get sign-off from all stakeholders
+
+#### Get sign-off on latest iteration from at least one reviewer 
+
+#### Make sure build succedes
+
+#### Squash commits and merge as a single commit
+
+#### Complete related work items
+
+### Enforcement
+
+### Exceptions
+
+# Ettiquetts
 
 # Linking work items
 ## Quality of work items
