@@ -1,6 +1,50 @@
 # Code Review Core Guidelines
 Author: Parag Mali
 
+# 1. Title
+
+#### 1.1 Be concise
+The title of the pull request should be descriptive enough to give a clear idea about the changes made, while also being concise enough to fit in a single line.
+
+#### 1.2 Use action oriented language
+Use action-oriented language that accurately describes the changes being made. This helps reviewers to understand what the code does and why it was changed.
+
+**Examples**
+
+- "Added new feature for user authentication"
+- "Fixed issue with database connection"
+- "Refactored code for better readability"
+- "Implemented error handling for edge cases"
+- "Optimized performance by reducing database queries"
+- "Added input validation for user inputs"
+- "Resolved conflicts with merge of upstream changes"
+- "Improved UX by adding pagination for search results"
+- "Added support for multiple languages"
+- "Created API endpoint for user profile information"
+
+#### 1.3 Use a prefix to highlight modified area
+Add a delimited text in the title to higlight the affected area. By adding a prefix to the pull request title makes it easier to search for (in an email client and pull request portal) and filter pull requests based on their type. This can be especially helpful in large projects where there are many pull requests. A clear and consistent prefix makes it easier to understand the purpose of a pull request without having to read the entire title. Do not add multiple prefixes because you may end up with a noisy title.
+
+**Examples**
+
+- [Search] Optimized search algorithm for faster results
+- [Payments] Added support for new payment gateway
+- [Authentication] Implemented two-factor authentication for added security
+
+#### 1.4 Tag pull requests
+Use tagging feature in your project management tool to tag your pull requests. When you add these tags to your pull request they usually autocomplete resulting no typos as compared to prefix in the title. Same tags can be added to the work items related to the pull request. It makes it easier to search for all work-items and pull requests using one query in the project management tool. The reason we need both prefix and tags is that tags generally do not show up in the email notifications you receive related to pull requests. Another advantage of tags is that you can tag your pull request with multiple tags. Adding multiple prefixes in the title will only introduce noise.
+
+### Enforcement 
+To enforce these guidelines, code reviewers can check the pull request titles and provide feedback to the submitter if necessary. Teams can also use automated tools to check if pull request titles meet the requirements.
+
+### Exceptions
+There may be situations where the changes being made are difficult to describe in a concise title, or where a generic title is sufficient. In such cases, it is important to ensure that the description of the pull request provides enough information about the changes.
+
+
+
+
+
+
 # Linking work items
 ## Quality of work items
 ## Bugs
