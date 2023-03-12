@@ -4,7 +4,7 @@ Author: Parag Mali
 # 1. Title
 
 #### 1.1 Be concise
-The title of the pull request should be descriptive enough to give a clear idea about the changes made, while also being concise enough to fit in a single line.
+The title should be descriptive enough to give a clear idea about the changes made, while also being concise enough to fit in a single line.
 
 #### 1.2 Use action oriented language
 Use action-oriented language that accurately describes the changes being made. This helps reviewers to understand what the code does and why it was changed.
@@ -23,7 +23,9 @@ Use action-oriented language that accurately describes the changes being made. T
 - "Created API endpoint for user profile information"
 
 #### 1.3 Use a prefix to highlight modified area
-Add a delimited text in pascal case in the title to higlight the affected area. By adding a prefix to the pull request title makes it easier to search for (in an email client and pull request portal) and filter pull requests based on their type. This can be especially helpful in large projects where there are many pull requests. A clear and consistent prefix makes it easier to understand the purpose of a pull request without having to read the entire title. Do not add multiple prefixes because you may end up with a noisy title.
+Add a delimited text in pascal case in the title to higlight the affected area. By adding a prefix to the title makes it easier to search for (in an email client and project management portal) and filter based on their type. This can be especially helpful in large projects where there are many code changes. A clear and consistent prefix makes it easier to understand the purpose of a change without having to read the entire title. 
+
+Do not add multiple prefixes because you may end up with a noisy title.
 
 **Examples**
 
@@ -32,7 +34,7 @@ Add a delimited text in pascal case in the title to higlight the affected area. 
 - [Authentication] Implemented two-factor authentication for added security
 
 #### 1.4 Tag pull requests
-Use tagging feature in your project management tool to tag your pull requests. When you add these tags to your pull request they usually autocomplete resulting no typos as compared to prefix in the title. Same tags can be added to the work items related to the pull request. It makes it easier to search for all work-items and pull requests using one query in the project management tool. The reason we need both prefix and tags is that tags generally do not show up in the email notifications you receive related to pull requests. Another advantage of tags is that you can tag your pull request with multiple tags. Adding multiple prefixes in the title will only introduce noise.
+Use tagging feature in your project management tool to tag your changes. These tags usually autocomplete resulting in reduced number of typos as compared to prefix in the title. Same tags can be added to the related work-items like tasks and bugs. It makes it easier to search for all work-items and changes using one query in the project management tool. The reason we need both prefix and tags is that tags generally do not show up in the email notifications you receive related to the code changes. Another advantage of tags is that you can tag your code changes with multiple tags. Adding multiple prefixes in the title will only introduce noise.
 
 ### Enforcement 
 To enforce these guidelines, code reviewers can check the pull request titles and provide feedback to the submitter if necessary. Teams can also use automated tools to check if pull request titles meet the requirements.
@@ -43,10 +45,10 @@ There may be situations where the changes being made are difficult to describe i
 
 # 2. Description  
 
-#### 2.1 Write documentation for future
-Pull request description is documentation for future. Write it in a way that assumes that reader has no context of this change.
+#### 2.1 Write documentation for the future
+Description is the documentation for the future. While writing description assumes that reader has no context of this change.
 
-#### 2.2 Include links to other related pull requests, documents, changes etc.
+#### 2.2 Include links to other related code changes, documents, etc.
 Include links to the documents that give additional information related to this pull request, may it be a spec or an one pager. Provide links to other related pull requests. 
 
 #### 2.3 Provide a brief summary of the changes
@@ -72,10 +74,6 @@ There may be situations where the changes being made are minor or self-explanato
 
 # Adding reviewers
 
-
-
-# Review
-
 #### Author is a first reviewer
 Make sure you review you own pull request. Add comments to your own pull request where changes should be made. Make all required changes before adding other reviewers.
 
@@ -89,8 +87,49 @@ Make sure you find out who owns the area that is affected by your changes and in
 Make sure at least one reviewer in the list of reviewers is programming language expert. If not, find out who can help and include them as a reviewer.
 
 ### Enforcement
+The team lead or project manager is responsible for establishing and communicating code review policies with the team. Reviewers should add additional reviewers as they may see fit. Author is responsible for getting code reviewed by all required reviewers.
 
 ### Exceptions
+While code review is an important process to ensure the quality of the codebase, there may be certain situations where getting code reviewed may not be necessary or feasible. If the changes being made are very minor, such as fixing a typo or adjusting formatting, it may not be necessary to have the code reviewed. Sometimes time sensitive changes like build fixes over weekends could be self-approved, even though it is not ideal.
+
+# Review
+
+## Author's responsibilites
+
+#### Give sufficient time to reviewers to review the changes
+Team lead should provide guidance on review SLA. Author should follow up with reviewers if code hasn't reviewed within SLA.
+
+### Use code review comments as a learning opportunity
+Author's should be open to feedback, constructive criticism, and collaborate with others. 
+
+#### Mark comments as Pending, Resolved, Won't Fix, Closed etc.
+
+- Pending: If a comment requires further discussion or clarification before it can be resolved, mark it as Pending. This indicates that the issue has been acknowledged, but further action is required before it can be resolved.
+
+- Resolved: When an issue raised in a comment has been addressed or fixed, mark the comment as Resolved. This indicates that the issue has been resolved and no further action is required.
+
+- Won't fix: If an issue raised in a comment is not a critical issue or if the proposed solution is not feasible, mark the comment as Won't Fix. This indicates that the issue has been acknowledged, but it will not be addressed at this time.
+
+- Closed: If no further action or discussion is required, mark the comment as Closed.
+
+## Reviewer's responsibilities
+
+#### Review changes within SLA
+
+#### Use tags like optional and required while adding comments
+Make it very clear what comments are optional to fix and what comments should be fixed.
+
+#### Cite references while adding comments
+If the comment is related to coding style cite language specific coding style guidelines. For example, for CPP reviewers could cite guidelines from https://github.com/isocpp/CppCoreGuidelines. If comment is related to engineering practice, cite appropriate documents and provide links to the documents. 
+
+#### Avoid generic comments
+Avoid generic comments like "fix this", "bug here". Explain what should be fixed and why there is a bug in the code. 
+
+## Common responsibilities
+
+#### Be respectful and professional in all communications.
+#### Make sure all agreed upon guidelines are followed.
+
 
 # Check-in
 
@@ -104,9 +143,6 @@ Make sure at least one reviewer in the list of reviewers is programming language
 
 #### Complete related work items
 
-### Enforcement
-
-### Exceptions
 
 # Ettiquetts
 
