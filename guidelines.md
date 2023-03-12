@@ -86,11 +86,22 @@ Make sure you find out who owns the area that is affected by your changes and in
 #### Add a programming language expert
 Make sure at least one reviewer in the list of reviewers is programming language expert. If not, find out who can help and include them as a reviewer.
 
+#### Indicate if reviewer is a required reviewer or an optional reviewer
+While adding reviewers, make sure you indicate who is required and who is not-required to review the changes.
+
 ### Enforcement
 The team lead or project manager is responsible for establishing and communicating code review policies with the team. Reviewers should add additional reviewers as they may see fit. Author is responsible for getting code reviewed by all required reviewers.
 
 ### Exceptions
 While code review is an important process to ensure the quality of the codebase, there may be certain situations where getting code reviewed may not be necessary or feasible. If the changes being made are very minor, such as fixing a typo or adjusting formatting, it may not be necessary to have the code reviewed. Sometimes time sensitive changes like build fixes over weekends could be self-approved, even though it is not ideal.
+
+# Publishing the code changes
+
+## Mark code changes as "draft" if they are in progress
+If changes are still in progress, but you want early feedback on the design, make sure you mark the changes with prefix like draft or WIP (work in progress). 
+
+## Publish changes only after you thorough validation
+After thorough validation is done, publish the code changes. 
 
 # Review
 
@@ -115,9 +126,10 @@ Author's should be open to feedback, constructive criticism, and collaborate wit
 ## Reviewer's responsibilities
 
 #### Review changes within SLA
+Decline to review if you won't be able to review within SLA.
 
 #### Use tags like optional and required while adding comments
-Make it very clear what comments are optional to fix and what comments should be fixed.
+Make it very clear what comments are optional to fix and what comments should be fixed. Appreciate good work when you like something using "kudos" prefix. Use "nit" prefix when you are nitpicking. 
 
 #### Cite references while adding comments
 If the comment is related to coding style cite language specific coding style guidelines. For example, for CPP reviewers could cite guidelines from https://github.com/isocpp/CppCoreGuidelines. If comment is related to engineering practice, cite appropriate documents and provide links to the documents. 
@@ -125,240 +137,55 @@ If the comment is related to coding style cite language specific coding style gu
 #### Avoid generic comments
 Avoid generic comments like "fix this", "bug here". Explain what should be fixed and why there is a bug in the code. 
 
+#### Vote on the code changes after the review
+
+- Approved: Use the "Approved" label when you have thoroughly reviewed the changes and believe that they meet the required quality standards. This label indicates that you are satisfied with the changes and that they can be merged into the codebase.
+
+- Approved with suggestions: Use the "Approved with suggestions" label when you believe that the changes are generally good, but there are minor issues or suggestions that should be addressed before the changes are merged. This label indicates that you are satisfied with the changes but there are some additional improvements that could be made.
+
+- Rejected: Use the "Rejected" label when you believe that the changes are not up to the required quality standards or that they introduce issues or bugs into the codebase. This label indicates that the changes need significant work before they can be merged.
+
+- Blocked: Use the "Blocked" label when you have raised an issue or question in the pull request and are waiting for the author to provide more information or make changes. This label indicates that you are unable to approve or reject the changes until further action is taken.
+
 ## Common responsibilities
 
 #### Be respectful and professional in all communications.
 #### Make sure all agreed upon guidelines are followed.
 
-
 # Check-in
 
-#### Get sign-off from all stakeholders
+#### Get sign-off from all reviewers
+Make sure all required reviewers have signed off on the code changes.
 
 #### Get sign-off on latest iteration from at least one reviewer 
+If you need to push code changes after last reviwer has signed-off make sure you get additional approval on the latest iteration of changes.
 
-#### Make sure build succedes
+#### Make sure build succeedes with latest iteration of code changes
+Build changes locally or on a build machine before check-in. Make sure your changes do not break builds of any other projects.  
 
 #### Squash commits and merge as a single commit
+Squash all commits and merge the changes to mainline as a single commit.
+
+#### Select appropriate target branch 
+Make sure the selected target branch for check-in is the correct branch. 
 
 #### Complete related work items
+Once code changes are checked-in, mark the appropriate work-items as completed.
 
+#### Delete remote-branch and local-branch
+If you have remote and local branch related to checked-in code changes, you may delete those branches.
 
-# Ettiquetts
-
-# Linking work items
-## Quality of work items
-## Bugs
-## Iteration
-## Marking it complete
-
-# Title
-## Text tags
-## Email search
-## Automated tags
-
-# Description
-## documentation
-## Why
-### documents, links, other prs
-## Changes
-## Testing
-### Screenshot
-### Command line 
-### Testing steps
-
-# Code reviewers
-## Seniors
-## Owners
-## Language experts
-## Immediate team or v-team
-## Required and optional reviewers
-
-# Publishing the PR
-## Draft PR
-## Abandoning PR
-
-# Review
-## Time
-## optional comments
-## Required comments
-## Kudos and nits
-## gifs - lighthearted
-## @mention
-## citing necessary guidelines
-# Merge or Abandon
-
-# Blocking the PR
-# Approving the PR
-# Approving with suggestions
-# Rejecting to review
-# Declining the PR
-
-## Work in progress
-## Explicitly @mention
-
-
-## Merging the pull request
-### Squash commit
-
-# Selecting the branch to commit
-## On demand build branch
-## Validation branch
-## Bugfix branch
-## Dev branch
-## Mainline
-
-# Description
-
-## 1: Do make the pull request easy to review.
+# Code changes
 
 #### 1.1: Do break up larger changes into smaller, manageable chunks.
-
-eiter pull request or commits
-
 #### 1.2: Do use clear and concise commit messages.
 #### 1.3: Do avoid unrelated changes in the same pull request.
-
-Single Responsibility Principle
-
-#### 1.4: Do write a clear description of what the changes do and why they are necessary.
-
-#### 1.5: Do mention any related issues or pull requests in the description.
-
-#### Enforcement
-Enforcing this guideline can be achieved through code reviews that ensure that each pull request is focused on a single task or issue. Pull request authors can help enforce this guideline by breaking up changes into smaller, more manageable pieces.
-
-#### Exceptions
-In some cases, it may be necessary to make multiple changes in a single pull request. For example, if the changes are all related to the same feature or issue, it may make sense to include them in the same pull request.
-
-#### Responsibilities
-The pull request author is responsible for ensuring that the changes are easy to review. The reviewer is responsible for verifying that the changes are well-organized and focused.
-
-## 8: Follow established coding standards.
-
 #### Follow established coding standards.
 #### Follow best practices for the programming language and framework being used.
 #### Follow established conventions for naming, formatting, and documentation.
-
-#### Enforcement
-Code reviews can help enforce adherence to coding standards. Automated tools can also help identify issues with naming, formatting, and documentation.
-
-#### Exceptions
-In some cases, it may be necessary to deviate from established coding standards. In these cases, the pull request author should clearly explain the reasons for the deviation.
-
-#### Responsibilities
-The pull request author is responsible for following established coding standards. The reviewer is responsible for verifying adherence to coding standards. The team lead or project manager is responsible for establishing and communicating coding standards.
-
-## 4: Write clear, readable code.
-
-#### Use clear and descriptive variable names.
-#### Use consistent formatting and style.
 #### Use comments to explain complex or non-obvious code.
-
-#### Enforcement
-Automated tools can help enforce consistent formatting and style. Code reviews can help enforce the use of clear variable names and comments.
-
-#### Exceptions
-In some cases, it may be difficult to come up with descriptive variable names or to write clear comments. In these cases, the pull request author should strive to make the code as readable as possible.
-
-#### Responsibilities
-The pull request author is responsible for writing clear, readable code. The reviewer is responsible for verifying that the code is clear and easy to read.
-
-
 ## 2: Avoid unnecessary changes.
-
 #### Avoid making changes that are unrelated to the task at hand.
 #### Avoid changing formatting or whitespace unless necessary.
 #### Avoid adding debugging code or commented-out code.
-
-#### Enforcement
-Code reviews can help enforce this guideline by identifying changes that are unrelated to the task at hand. Pull request authors can help enforce this guideline by only making necessary changes.
-
-#### Exceptions
-Sometimes, seemingly unrelated changes may be necessary to complete the task at hand. For example, a change to a shared library may require updates to several projects that depend on that library.
-
-#### Responsibilities
-The pull request author is responsible for ensuring that changes are related to the task at hand. The reviewer is responsible for identifying any unnecessary changes.
-
-
-## 3: Consider the impact of changes on other code.
-
-#### Consider the impact of changes on other parts of the codebase.
-#### Consider the performance implications of changes.
-#### Consider the compatibility of changes with existing code.
-
-#### Enforcement
-Code reviews can help enforce this guideline by identifying potential issues with changes. Pull request authors can help enforce this guideline by carefully considering the impact of their changes before submitting a pull request.
-
-#### Exceptions
-In some cases, changes may need to be made even if they have negative implications for performance or compatibility. In these cases, the pull request author should clearly explain the reasons for the changes and provide any necessary documentation.
-
-#### Responsibilities
-The pull request author is responsible for considering the impact of their changes. The reviewer is responsible for verifying that potential issues have been considered.
-
-## 5: Test code thoroughly.
-
-#### Don't submit code that hasn't been tested.
-#### Don't submit code that introduces new bugs.
-#### Don't submit code that breaks existing tests.
-#### Do test all new and modified functionality.
-#### Do test edge cases and error handling.
-#### Do test on multiple platforms and configurations.
-
-#### Enforcement
-Automated testing can help enforce this guideline by catching bugs before they are introduced into the codebase. Code reviews can also help identify potential issues and areas where additional testing may be necessary.
-
-#### Exceptions
-In some cases, thorough testing may not be possible or practical. In some cases, bugs may be introduced despite best efforts to prevent them. In these cases, the pull request author should work quickly to fix the issue and communicate with the team.
-
-#### Responsibilities
-The pull request author is responsible for thoroughly testing their code and ensuring that it does not introduce new bugs. The reviewer is responsible for verifying that the code has been adequately tested and does not introduce new issues.
-
-## 6: Document changes.
-
-#### Document new or modified functionality.
-#### Document any new or modified APIs.
-#### Document any changes to configuration or deployment processes.
-
-#### Enforcement
-Code reviews can help enforce this guideline by ensuring that changes are properly documented. Pull request authors can help enforce this guideline by providing clear documentation along with their changes.
-
-#### Exceptions
-In some cases, it may be difficult to document every aspect of a change. In these cases, the pull request author should strive to document the most important aspects of the change.
-
-#### Responsibilities
-The pull request author is responsible for documenting changes. The reviewer is responsible for verifying that changes have been adequately documented.
-
-## 7: Be respectful and professional.
-
-#### Be respectful and professional in all communications.
-#### Be open to feedback and constructive criticism.
-#### Be willing to collaborate with others.
-
-#### Enforcement
-The team lead or project manager can help enforce this guideline by setting expectations for respectful and professional behavior. Team members can help enforce this guideline by modeling respectful and professional behavior in their own interactions.
-
-#### Exceptions
-There are no exceptions to this guideline. Respectful and professional behavior is always expected.
-
-#### Responsibilities
-All team members are responsible for maintaining a respectful and professional environment. Team leads or project managers are responsible for addressing any behavior that violates this guideline.
-
-## Guideline 10: Communicate effectively.
-
-#### Communicate clearly and effectively in all interactions.
-#### Communicate changes to the team and stakeholders.
-#### Communicate any issues or blockers that may affect progress.
-
-#### Enforcement
-The team lead or project manager can help enforce this guideline by setting expectations for clear and effective communication. Team members can help enforce this guideline by providing regular updates on their progress and any issues they encounter.
-
-#### Exceptions
-There are no exceptions to this guideline. Effective communication is essential for successful collaboration.
-
-#### Responsibilities
-All team members are responsible for communicating effectively. The team lead or project manager is responsible for ensuring that effective communication is taking place and addressing any issues that arise.
-
-
-
 
