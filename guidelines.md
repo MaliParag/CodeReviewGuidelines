@@ -72,21 +72,21 @@ To enforce these guidelines, reviewers can check the pull request description an
 ### Exceptions
 There may be situations where the changes being made are minor or self-explanatory, and a detailed description is not necessary. However, it is always better to err on the side of providing more information rather than less, to ensure that reviewers have all the information they need to make informed decisions.
 
-# Adding reviewers
+# 3 Adding reviewers
 
-#### Author is a first reviewer
+#### 3.1 Author is a first reviewer
 Make sure you review you own pull request. Add comments to your own pull request where changes should be made. Make all required changes before adding other reviewers.
 
-#### Add your own team or project alias
+#### 3.2 Add your own team or project alias
 Include your own team and project team alias. Include at least one senior reviewer from your team.
 
-#### Add affected area owners
+#### 3.3 Add affected area owners
 Make sure you find out who owns the area that is affected by your changes and include all affected area owners. Include their team alias and at least one senior member of the team individually per affected area.
 
-#### Add a programming language expert
+#### 3.4 Add a programming language expert
 Make sure at least one reviewer in the list of reviewers is programming language expert. If not, find out who can help and include them as a reviewer.
 
-#### Indicate if reviewer is a required reviewer or an optional reviewer
+#### 3.5 Indicate if reviewer is a required reviewer or an optional reviewer
 While adding reviewers, make sure you indicate who is required and who is not-required to review the changes.
 
 ### Enforcement
@@ -95,25 +95,25 @@ The team lead or project manager is responsible for establishing and communicati
 ### Exceptions
 While code review is an important process to ensure the quality of the codebase, there may be certain situations where getting code reviewed may not be necessary or feasible. If the changes being made are very minor, such as fixing a typo or adjusting formatting, it may not be necessary to have the code reviewed. Sometimes time sensitive changes like build fixes over weekends could be self-approved, even though it is not ideal.
 
-# Publishing the code changes
+# 4 Publishing the code changes
 
-## Mark code changes as "draft" if they are in progress
+## 4.1 Mark code changes as "draft" if they are in progress
 If changes are still in progress, but you want early feedback on the design, make sure you mark the changes with prefix like draft or WIP (work in progress). 
 
-## Publish changes only after you thorough validation
+## 4.2 Publish changes only after you thorough validation
 After thorough validation is done, publish the code changes. 
 
-# Review
+# 5 Review
 
-## Author's responsibilites
+## 5.1 Author's responsibilites
 
-#### Give sufficient time to reviewers to review the changes
+#### 5.1.1 Give sufficient time to reviewers to review the changes
 Team lead should provide guidance on review SLA. Author should follow up with reviewers if code hasn't reviewed within SLA.
 
-### Use code review comments as a learning opportunity
+### 5.1.2 Use code review comments as a learning opportunity
 Author's should be open to feedback, constructive criticism, and collaborate with others. 
 
-#### Mark comments as Pending, Resolved, Won't Fix, Closed etc.
+#### 5.1.3 Mark comments as Pending, Resolved, Won't Fix, Closed etc.
 
 - Pending: If a comment requires further discussion or clarification before it can be resolved, mark it as Pending. This indicates that the issue has been acknowledged, but further action is required before it can be resolved.
 
@@ -123,21 +123,21 @@ Author's should be open to feedback, constructive criticism, and collaborate wit
 
 - Closed: If no further action or discussion is required, mark the comment as Closed.
 
-## Reviewer's responsibilities
+## 5.2 Reviewer's responsibilities
 
-#### Review changes within SLA
+#### 5.2.1 Review changes within SLA
 Decline to review if you won't be able to review within SLA.
 
-#### Use tags like optional and required while adding comments
+#### 5.2.2 Use tags like optional and required while adding comments
 Make it very clear what comments are optional to fix and what comments should be fixed. Appreciate good work when you like something using "kudos" prefix. Use "nit" prefix when you are nitpicking. 
 
-#### Cite references while adding comments
+#### 5.2.3 Cite references while adding comments
 If the comment is related to coding style cite language specific coding style guidelines. For example, for CPP reviewers could cite guidelines from https://github.com/isocpp/CppCoreGuidelines. If comment is related to engineering practice, cite appropriate documents and provide links to the documents. 
 
-#### Avoid generic comments
+#### 5.2.4 Avoid generic comments
 Avoid generic comments like "fix this", "bug here". Explain what should be fixed and why there is a bug in the code. 
 
-#### Vote on the code changes after the review
+#### 5.2.5 Vote on the code changes after the review
 
 - Approved: Use the "Approved" label when you have thoroughly reviewed the changes and believe that they meet the required quality standards. This label indicates that you are satisfied with the changes and that they can be merged into the codebase.
 
@@ -147,45 +147,42 @@ Avoid generic comments like "fix this", "bug here". Explain what should be fixed
 
 - Blocked: Use the "Blocked" label when you have raised an issue or question in the pull request and are waiting for the author to provide more information or make changes. This label indicates that you are unable to approve or reject the changes until further action is taken.
 
-## Common responsibilities
+## 5.3 Common responsibilities
 
-#### Be respectful and professional in all communications.
-#### Make sure all agreed upon guidelines are followed.
+#### 5.3.1 Be respectful and professional in all communications.
+#### 5.3.2 Make sure all agreed upon guidelines are followed.
 
-# Check-in
+# 6 Check-in
 
-#### Get sign-off from all reviewers
+#### 6.1 Get sign-off from all reviewers
 Make sure all required reviewers have signed off on the code changes.
 
-#### Get sign-off on latest iteration from at least one reviewer 
+#### 6.2 Get sign-off on latest iteration from at least one reviewer 
 If you need to push code changes after last reviwer has signed-off make sure you get additional approval on the latest iteration of changes.
 
-#### Make sure build succeedes with latest iteration of code changes
+#### 6.3 Make sure build succeedes with latest iteration of code changes
 Build changes locally or on a build machine before check-in. Make sure your changes do not break builds of any other projects.  
 
-#### Squash commits and merge as a single commit
+#### 6.4 Squash commits and merge as a single commit
 Squash all commits and merge the changes to mainline as a single commit.
 
-#### Select appropriate target branch 
+#### 6.5 Select appropriate target branch 
 Make sure the selected target branch for check-in is the correct branch. 
 
-#### Complete related work items
+#### 6.6 Complete related work items
 Once code changes are checked-in, mark the appropriate work-items as completed.
 
-#### Delete remote-branch and local-branch
+#### 6.7 Delete remote-branch and local-branch
 If you have remote and local branch related to checked-in code changes, you may delete those branches.
 
-# Code changes
+# 7 Code changes
 
-#### 1.1: Do break up larger changes into smaller, manageable chunks.
-#### 1.2: Do use clear and concise commit messages.
-#### 1.3: Do avoid unrelated changes in the same pull request.
-#### Follow established coding standards.
-#### Follow best practices for the programming language and framework being used.
-#### Follow established conventions for naming, formatting, and documentation.
-#### Use comments to explain complex or non-obvious code.
-## 2: Avoid unnecessary changes.
-#### Avoid making changes that are unrelated to the task at hand.
-#### Avoid changing formatting or whitespace unless necessary.
-#### Avoid adding debugging code or commented-out code.
-
+#### 7.1 Break up larger changes into smaller, manageable chunks.
+#### 7.2 Avoid unrelated changes in the same pull request.
+Avoid making changes that are unrelated to the task at hand. Avoid changing formatting or whitespace unless necessary. Avoid adding debugging code or commented-out code.
+#### 7.3 Follow established coding standards.
+Follow best practices for the programming language and framework being used. Follow established conventions for naming, formatting, and documentation.
+#### 7.4 Use comments to explain complex or non-obvious code.
+Write self-documenting code. Only add comments if code is not obvious. Do not add comments to explain what code is doing, only add comments to explain why the code is doing what it is doing.
+#### 7.5 Use clear and concise commit messages.
+Consider each commit as a smaller code review and commit message as a title of that code review. Use guidelines in the title section for writing the commit message.
