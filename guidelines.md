@@ -23,7 +23,7 @@ Use action-oriented language that accurately describes the changes being made. T
 - "Created API endpoint for user profile information"
 
 #### 1.3 Use a prefix to highlight modified area
-Add a delimited text in the title to higlight the affected area. By adding a prefix to the pull request title makes it easier to search for (in an email client and pull request portal) and filter pull requests based on their type. This can be especially helpful in large projects where there are many pull requests. A clear and consistent prefix makes it easier to understand the purpose of a pull request without having to read the entire title. Do not add multiple prefixes because you may end up with a noisy title.
+Add a delimited text in pascal case in the title to higlight the affected area. By adding a prefix to the pull request title makes it easier to search for (in an email client and pull request portal) and filter pull requests based on their type. This can be especially helpful in large projects where there are many pull requests. A clear and consistent prefix makes it easier to understand the purpose of a pull request without having to read the entire title. Do not add multiple prefixes because you may end up with a noisy title.
 
 **Examples**
 
@@ -41,9 +41,34 @@ To enforce these guidelines, code reviewers can check the pull request titles an
 There may be situations where the changes being made are difficult to describe in a concise title, or where a generic title is sufficient. In such cases, it is important to ensure that the description of the pull request provides enough information about the changes.
 
 
+# 2. Description  
 
+#### 2.1 Write documentation for future
+Pull request description is documentation for future. Write it in a way that assumes that reader has no context of this change.
 
+#### 2.2 Include links to other related pull requests, documents, changes etc.
+Include links to the documents that give additional information related to this pull request, may it be a spec or an one pager. Provide links to other related pull requests. 
 
+#### 2.3 Provide a brief summary of the changes
+Start the description with a brief summary of the changes being made. This should be concise and give an overview of what the pull request does.
+
+#### 2.4 Explain the reasoning behind the changes
+Provide a detailed explanation of why the changes were made. Mention alternative approaches considered and reasons behind choosing current approach. This can help reviewers understand the context and make more informed decisions about the code changes.
+
+#### 2.5 Use @mention to bring attention any potential issues or areas for further review
+Use @mention to mention all stakeholders and to bring their attention to potential impacts of current code changes or areas where you want input from reviewers.
+
+#### 2.6 Include test cases or link to the test case document
+Include all test cases with steps that were used to validate the changes. Include commands or scripts used for validation.
+
+#### 2.7 Include screenshots and outputs of the test cases
+Include screenshots or outputs of the test cases showing that all test cases passed. Include outputs, so future testers can verify their outputs with your output.
+
+## Enforcement
+To enforce these guidelines, reviewers can check the pull request description and provide feedback to the submitter if necessary. Teams can also use automated tools to add an agreed upon template to the description box automatically when a new pull request is created. Reviewers need to make sure all details are provided in the added template.
+
+## Exceptions
+There may be situations where the changes being made are minor or self-explanatory, and a detailed description is not necessary. However, it is always better to err on the side of providing more information rather than less, to ensure that reviewers have all the information they need to make informed decisions.
 
 # Linking work items
 ## Quality of work items
