@@ -1,4 +1,3 @@
-# Code Review Core Guidelines
 Author: Parag Mali
 
 # 1. Title
