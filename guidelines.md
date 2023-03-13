@@ -1,7 +1,9 @@
 # Code Review Core Guidelines
 Author: Parag Mali
 
-# 1. Title
+I've compiled essential code review guidelines that will help you establish a standardized process for reviewing code. From writing a good title to marking a comment resolved, these guidelines cover all the crucial aspects of code review.
+
+# 1 Title
 
 #### 1.1 Be concise
 The title should be descriptive enough to give a clear idea about the changes made, while also being concise enough to fit in a single line.
@@ -43,7 +45,7 @@ To enforce these guidelines, code reviewers can check the pull request titles an
 There may be situations where the changes being made are difficult to describe in a concise title, or where a generic title is sufficient. In such cases, it is important to ensure that the description of the pull request provides enough information about the changes.
 
 
-# 2. Description  
+# 2 Description  
 
 #### 2.1 Write documentation for the future
 Description is the documentation for the future. While writing description assumes that reader has no context of this change.
